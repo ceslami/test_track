@@ -59,6 +59,8 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'rubocop'
 
+  gem 'dotenv-rails'
+
   gem 'poltergeist'
   gem 'site_prism'
   gem 'selenium-webdriver'
