@@ -6,7 +6,7 @@ class VariantDetail < ActiveRecord::Base
   validate :variant_must_exist
   validates :display_name, :description, presence: true
 
-  validates_attachment :screenshot, content_type: { content_type: /\Aimage\/.+\z/ }, size: { in: 0..AttachmentSettings.max_size }
+  validates_attachment :screenshot, content_type: { content_type: %r(\Aimage\/.+\z) }, size: { in: 0..AttachmentSettings.max_size }
 
   def display_name
     super || variant
