@@ -46,6 +46,7 @@ class AttachmentSettings
       },
       bucket: ENV['S3_ATTACHMENT_BUCKET'],
       s3_region: ENV['S3_REGION'] || 'us-east-1',
+      s3_permissions: ENV['S3_ATTACHMENT_PERMISSIONS'] || 'private',
       path: ENV['S3_ATTACHMENT_PATH'] || ':class/:attachment/:id_partition/:style/:filename'
     }
   end
